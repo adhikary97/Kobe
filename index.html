@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mamba Tribute</title>
+    <link rel="shortcut icon" type="image/x-icon" href="kobe_logo.png" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial;
+        font-size: 17px;
+        background-color: black;
+      }
+
+      #myVideo {
+        position: center;
+        min-width: 80%;
+        min-height: 80%;
+      }
+
+      .content {
+        position: fixed;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .vid {
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+      }
+
+      #myBtn {
+        width: 200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: #fff;
+        color: #000;
+        cursor: pointer;
+      }
+
+      #myBtn:hover {
+        background: #000;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="vid">
+      <video autoplay loop preload="auto" id="myVideo">
+        <source
+          src="RIP Kobe Bryant - Best Career Moments - See You Again.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+
+    <div class="content">
+      <h1>R.I.P Kobe Bryant | Mamba Forever</h1>
+      <p>
+        I just wanna say thank you to Kobe for forever being in our hearts and
+        minds. He continues to inspire us everyday, keeps us motivated, and his
+        story reminds us to use everyday to the fullest and strive to be the
+        best at what you do. Thank you Kobe.
+      </p>
+      <button id="myBtn" onclick="myFunction()">Play</button>
+      <button id="myBtn" href="https://www.youtube.com/watch?v=xy0pfpu_m98">
+        Video Credit
+      </button>
+    </div>
+
+    <script>
+      var video = document.getElementById('myVideo');
+      var btn = document.getElementById('myBtn');
+
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = 'Pause';
+        } else {
+          video.pause();
+          btn.innerHTML = 'Play';
+        }
+      }
+    </script>
+  </body>
+</html>
